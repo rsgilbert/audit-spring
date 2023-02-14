@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Add Visit</title>
+</head>
+<body>
+<h1><b>Add Visit</b></h1>
+<form th:action="@{/visits/add}" th:object="${visit}" method="post">
+    <table>
+        <tr>
+            <td>
+                <label th:text="Description"></label>
+            </td>
+            <td>
+                <input type="text" th:field="${visit.description}" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Start Date</label>
+            </td>
+            <td>
+                <input type="date" th:field="*{startDate}" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>End Date</label>
+            </td>
+            <td>
+                <input type="date" th:field="*{endDate}" />
+            </td>
+        </tr>
+    </table>
+    <button type="submit">
+        SUBMIT
+    </button>
+</form>
+
+</body>
+</html>
