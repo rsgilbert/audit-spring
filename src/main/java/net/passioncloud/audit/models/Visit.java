@@ -16,7 +16,10 @@ public class Visit {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+
     private LocalDate startDate;
     private LocalDate endDate;
     private String description;
+
+
 }
